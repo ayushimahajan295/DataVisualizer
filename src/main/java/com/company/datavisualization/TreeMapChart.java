@@ -14,7 +14,7 @@ public class TreeMapChart extends JFrame {
     public TreeMapChart(String title, Vector<Vector<Object>> data) {
         super(title);
         DefaultPieDataset dataset = new DefaultPieDataset();
-        for (int i = 1; i < data.size(); i++) { // Skip header row
+        for (int i = 1; i < data.size(); i++) { 
             Vector<Object> row = data.get(i);
             String item = row.get(0).toString();
             Double amount = Double.valueOf(row.get(1).toString());
@@ -22,7 +22,7 @@ public class TreeMapChart extends JFrame {
         }
 
         JFreeChart treeMapChart = ChartFactory.createRingChart(
-                "Tree Map Chart Example",
+                "Tree Map Chart",
                 dataset,
                 true, true, false);
 
